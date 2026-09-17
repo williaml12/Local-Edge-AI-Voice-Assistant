@@ -31,7 +31,7 @@ This project leverages the following AI components to build the voice assistant 
 
 ### The Python Brain (`main.py`)
 The Python application acts as the central orchestrator, chaining multiple AI models into a seamless pipeline:
-1. **Keyword Spotting:** A lightweight model constantly monitors the microphone for the wake word: *"Ventuno"*.
+1. **Keyword Spotting:** A lightweight model constantly monitors the microphone for the wake word: *"Hi Arduino"*.
 2. **Automatic Speech Recognition (ASR):** Once awake, it records and transcribes the user's voice command.
 3. **Context Injection:** The system dynamically reads the local hardware time via `zoneinfo` and injects it as an invisible system prompt, giving the offline LLM awareness of the current date and time.
 4. **Local LLM:** The transcribed text is sent to the `genie:qwen3-4b` model running locally on the NPU.
