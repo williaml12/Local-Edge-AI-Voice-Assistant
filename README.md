@@ -40,7 +40,7 @@ The Python application acts as the central orchestrator, chaining multiple AI mo
 To keep the hardware UI synchronized, Python uses `Bridge.call("set_state", X)` to broadcast the current status (Idle, Listening, Processing, Speaking) down to the microcontroller.
 
 ### The Hardware UI (`sketch.ino`)
-The C++ sketch runs on the VENTUNO Q's MCU and listens for Remote Procedure Calls (RPC) from the Python environment. It updates the `currentState` variable to drive the onboard 104-LED matrix using a 3-bit grayscale color space.
+The C++ sketch runs on the UNO Q's MCU and listens for Remote Procedure Calls (RPC) from the Python environment. It updates the `currentState` variable to drive the onboard 104-LED matrix using a 3-bit grayscale color space.
 
 The UI provides instant visual feedback based on the AI's state:
 * **Idle (State 0):** The matrix clears completely to save power.
