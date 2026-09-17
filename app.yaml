@@ -1,0 +1,13 @@
+name: Keyword-ASR-LLM-Kokoro-TTS
+description: AI Assistant that performs keyword spotting, ASR, local LLM inference, and TTS using Kokoro TTS.
+ports: []
+bricks:
+- arduino:llm:
+    model: llamacpp:Qwen3.5-0.8B-Q4_0
+- arduino:keyword_spotting:
+    model: ei-model-1070140-1
+- kokoro_tts: {}
+- asr_local: {}
+- arduino:cloud_asr: {}
+- arduino:web_ui: {}
+icon: 🎙️
