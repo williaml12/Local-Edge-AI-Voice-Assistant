@@ -1,0 +1,6 @@
+id: asr_local
+name: Local ASR (Whisper Container)
+variables:
+  - name: "ASR_MODEL"
+    description: "Whisper model size (tiny, base, small, medium)"
+    default_value: "base"
