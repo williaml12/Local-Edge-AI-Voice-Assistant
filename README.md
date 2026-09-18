@@ -8,7 +8,7 @@ This project follows the standard Arduino App Lab multi-language architecture, w
 
 * `app.yaml`: Main application configuration.
 * `bricks/kokoro_tts/`: **Custom Brick module** integrating the Kokoro Text-to-Speech engine.
-* `bricks/asr_local/`: **Custom Brick module** this Brick transcribes your spoken command into text.
+* `bricks/asr_local/`: **Custom Brick module**; this Brick transcribes your spoken command into text.
 * `python/main.py`: The core Python backend managing the AI models, state machine, and hardware orchestration.
 * `sketch/sketch.ino`: The C++ firmware handling the hardware-level LED matrix animations.
 * `sketch/sketch.yaml`: Microcontroller build configuration.
@@ -35,7 +35,7 @@ The Python application acts as the central orchestrator, chaining multiple AI mo
 1. **Keyword Spotting:** A lightweight model constantly monitors the microphone for the wake word: *"Hi Arduino"*.
 2. **Automatic Speech Recognition (ASR):** Once awake, it records and transcribes the user's voice command.
 3. **Context Injection:** The system dynamically reads the local hardware time via `zoneinfo` and injects it as an invisible system prompt, giving the offline LLM awareness of the current date and time.
-4. **Local LLM:** The transcribed text is sent to the `genie:qwen3-4b` model running locally on the NPU.
+4. **Local LLM:** The transcribed text is sent to the `genie:Qwen 3.5 0.8B` model running locally on the NPU.
 5. **Text-to-Speech (Kokoro):** The generated response is synthesized into a temporary `.wav` file by the Custom Brick. The system then forces playback directly to a specific hardware device using native Linux audio protocols (`aplay -D plughw:1,0`).
 
 To keep the hardware UI synchronized, Python uses `Bridge.call("set_state", X)` to broadcast the current status (Idle, Listening, Processing, Speaking) down to the microcontroller.
