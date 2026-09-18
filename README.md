@@ -1,4 +1,4 @@
-# Local Edge AI Voice Assistant (Kokoro TTS Edition)
+# Local Edge AI Voice Assistant (Kokoro TTS & asr_local Edition)
 
 A fully offline, privacy-first voice assistant built with Arduino App Lab for the UNO Q. It features a Local Large Language Model (LLM), real-time speech recognition, LED animations, and high-fidelity speech synthesis using Kokoro TTS.
 
@@ -7,7 +7,7 @@ A fully offline, privacy-first voice assistant built with Arduino App Lab for th
 This project follows the standard Arduino App Lab multi-language architecture, with the addition of a custom module directory:
 
 * `app.yaml`: Main application configuration.
-* `assets/bricks/kokoro_tts/`: **Custom Brick module** integrating the Kokoro Text-to-Speech engine.
+* `bricks/kokoro_tts/`: **Custom Brick module** integrating the Kokoro Text-to-Speech engine.
 * `python/main.py`: The core Python backend managing the AI models, state machine, and hardware orchestration.
 * `sketch/sketch.ino`: The C++ firmware handling the hardware-level LED matrix animations.
 * `sketch/sketch.yaml`: Microcontroller build configuration.
@@ -16,7 +16,7 @@ This project follows the standard Arduino App Lab multi-language architecture, w
 
 This application takes full advantage of the **Custom Bricks** feature. 
 
-Since the advanced Kokoro TTS model is not part of the standard built-in Bricks library, it is bundled directly into the project under the `assets/bricks/` directory. This allows the Python backend to seamlessly import and utilize the `KokoroTTS` class just like any native component (`from kokoro_tts import KokoroTTS`), demonstrating how developers can extend the Arduino App Lab ecosystem with their own state-of-the-art AI models.
+Since the advanced Kokoro TTS model is not part of the standard built-in Bricks library, it is bundled directly into the project under the `bricks/` directory. This allows the Python backend to seamlessly import and utilize the `KokoroTTS` class just like any native component (`from kokoro_tts import KokoroTTS`), demonstrating how developers can extend the Arduino App Lab ecosystem with their own state-of-the-art AI models.
 
 ## Bricks Used
 
