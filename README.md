@@ -8,6 +8,7 @@ This project follows the standard Arduino App Lab multi-language architecture, w
 
 * `app.yaml`: Main application configuration.
 * `bricks/kokoro_tts/`: **Custom Brick module** integrating the Kokoro Text-to-Speech engine.
+* `bricks/asr_local/`: **Custom Brick module** transcrible your speech into text.
 * `python/main.py`: The core Python backend managing the AI models, state machine, and hardware orchestration.
 * `sketch/sketch.ino`: The C++ firmware handling the hardware-level LED matrix animations.
 * `sketch/sketch.yaml`: Microcontroller build configuration.
