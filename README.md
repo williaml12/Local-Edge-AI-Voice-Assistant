@@ -1,6 +1,6 @@
 # Local Edge AI Voice Assistant (Kokoro TTS & asr_local Edition)
 
-A fully offline, privacy-first voice assistant built with Arduino App Lab for the UNO Q. It features a Local Large Language Model (LLM), real-time speech recognition (ASR local), LED animations, and high-fidelity speech synthesis using Kokoro TTS. Since there is no ASR in the Arduino Uno Q, We have to create custom Bricks by my self.
+A fully offline, privacy-first voice assistant built with Arduino App Lab for the UNO Q. It features a Local Large Language Model (LLM), real-time speech recognition (ASR local), LED animations, and high-fidelity speech synthesis using Kokoro TTS. Since there is no ASR Brick in the Arduino Uno Q, we have to create custom Bricks by our self.
 
 ## Project Structure
 
@@ -8,7 +8,7 @@ This project follows the standard Arduino App Lab multi-language architecture, w
 
 * `app.yaml`: Main application configuration.
 * `bricks/kokoro_tts/`: **Custom Brick module** integrating the Kokoro Text-to-Speech engine.
-* `bricks/asr_local/`: **Custom Brick module** Once awake, this Brick transcribes your spoken command into text.
+* `bricks/asr_local/`: **Custom Brick module** this Brick transcribes your spoken command into text.
 * `python/main.py`: The core Python backend managing the AI models, state machine, and hardware orchestration.
 * `sketch/sketch.ino`: The C++ firmware handling the hardware-level LED matrix animations.
 * `sketch/sketch.yaml`: Microcontroller build configuration.
@@ -24,7 +24,7 @@ Since the advanced Kokoro TTS and Local ASR (Whisper Container) models are not p
 This project leverages the following AI components to build the voice assistant pipeline:
 
 * **Keyword Spotting:** A lightweight, always-on listener that detects the wake word to activate the system.
-* **Automatic Speech Recognition (ASR):** Transcribes live audio from your microphone into text.
+* **Automatic Speech Recognition (ASR)(Custom Brick):** Transcribes live audio from your microphone into text.
 * **Large Language Model (LLM):** The core intelligence that processes your transcribed commands and generates intelligent responses.
 * **Kokoro TTS (Custom Brick):** A custom-integrated, high-fidelity Text-to-Speech engine that converts the assistant's text responses back into spoken audio.
 
