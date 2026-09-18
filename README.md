@@ -1,6 +1,6 @@
 # Local Edge AI Voice Assistant (Kokoro TTS & asr_local Edition)
 
-A fully offline, privacy-first voice assistant built with Arduino App Lab for the UNO Q. It features a Local Large Language Model (LLM), real-time speech recognition (ASR local), LED animations, and high-fidelity speech synthesis using Kokoro TTS.
+A fully offline, privacy-first voice assistant built with Arduino App Lab for the UNO Q. It features a Local Large Language Model (LLM), real-time speech recognition (ASR local), LED animations, and high-fidelity speech synthesis using Kokoro TTS. Since there is no ASR in the Arduino Uno Q, We have to create custom Bricks by my self.
 
 ## Project Structure
 
