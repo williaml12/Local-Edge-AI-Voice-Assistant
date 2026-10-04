@@ -52,3 +52,4 @@ The UI provides instant visual feedback based on the AI's state:
 
 * USB Microphone (Connected to USB-A)
 * USB Headset/Speaker (Connected to USB-A. Note: `main.py` maps the output explicitly to ALSA card 1, device 0).
+* Optional: Keyboard and Mouse (Use UNO Q as a standalone Single-Board computer)
